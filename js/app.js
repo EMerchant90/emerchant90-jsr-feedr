@@ -40,7 +40,12 @@ function mainNews() {
         var source = JSON.stringify(data.articles[i].source.name);
         var impression = JSON.stringify(data.articles[i].publishedAt);
         //var link = JSON.stringify(data.articles[i].url);
-        //var image = JSON.stringify(data.articles[i].urlToImage);
+        var $image = $("featuredImage").first();
+        var $downloadingImage = $("<img>");
+        $downloadingImage.load(function(){
+          $image.attr("src", $(this).attr("src"));
+        });
+        $downloadingImage.attr("src", "http://an.image/to/aynchrounously/download.jpg");
         var context = {title: title, body: source, impression: impression};
         var html = template(context);
         $('#main').append(html);
@@ -78,3 +83,7 @@ var template = Handlebars.compile(source);
 //   //console.log($(type));
 //   console.log(type);
 // });
+
+//var URLimage = JSON.stringify(data.articles[i].urlToImage);
+//$('.featuredImage').html('<img src="image/png;base64,' + URLimage + '" />')
+//console.log(image.src);
