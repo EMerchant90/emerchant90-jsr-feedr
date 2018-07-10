@@ -5,7 +5,6 @@
 var ign = 'sources=ign';
 var tCrunch = 'sources=techcrunch';
 var engadget = 'sources=engadget';
-
 var https = 'https://newsapi.org/v2/top-headlines?';
 var api = '&apiKey=a557903c3a56475285f31f2a306fb69a';
 
@@ -15,13 +14,6 @@ var windows;
 var tCrunchURL =  https + tCrunch + api;
 var ignURL = https + ign + api;
 var engadgetURL = https + engadget + api;
-
-// var title;
-// var description;
-// var link;
-
-// console.log(url);
-// console.log(ignURL);
 
 function mainNews(url) {
 
@@ -63,20 +55,6 @@ function mainNews(url) {
     }
   })
 };
-
-// $(document).on("click", ".article", function() {
-//    document.getElementById("popUp").classList.remove("hidden");
-//    windows = '<a href="#" class="closePopUp">X</a><div class="container"><h1>'+title+'</h1><p>'+description+'</p><a href="'+link+'" class="popUpAction" target="_blank">Read more from source</a></div>'
-//    // console.log(i);
-//    console.log(windows);
-//    $("#popUp").empty();
-//    $("#popUp").html(windows);
-//
-//    $(document).on("click", ".closePopUp", function() {
-//      document.getElementById("popUp").classList.add("hidden");
-//    });
-//
-// });
 
 mainNews(ignURL)
 
