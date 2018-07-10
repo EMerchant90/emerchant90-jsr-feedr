@@ -101,3 +101,7 @@ $("#engadget").click(function() {
   document.getElementById("source").textContent="Engadget";
   return mainNews(engadgetURL);
 })
+
+$("#search").click(function(){
+  $("#search").toggleClass("active");
+});
