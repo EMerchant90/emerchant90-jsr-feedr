@@ -90,6 +90,12 @@ $("#ign").click(function() {
   return mainNews(ignURL);
 })
 
+$('h1').click(function(){
+  emptyNews();
+  document.getElementById("source").textContent='IGN';
+  return mainNews(ignURL);
+});
+
 $("#techCrunch").click(function() {
   emptyNews();
   document.getElementById("source").textContent="Tech Crunch";
